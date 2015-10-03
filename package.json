@@ -1,0 +1,23 @@
+{
+  "name": "feelings",
+  "version": "0.1.0",
+  "description": "A javascript data validation library",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --recursive tests/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elishacook/feelings.git"
+  },
+  "author": "Elisha Fitch-Cook <elisha@cooper.com> (https://github.com/elishacook)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elishacook/feelings/issues"
+  },
+  "homepage": "https://github.com/elishacook/feelings",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3"
+  }
+}

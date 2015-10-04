@@ -42,6 +42,20 @@ describe('feelings', function ()
         expect(errors).to.be.null
     })
     
+    it('ignores a field if it is null', function ()
+    {
+        var data = { foo: null }
+        var errors = validate({ foo: { required: true } }, data)
+        expect(errors.foo).to.equal('This field is required')
+    })
+    
+    it('ignores a field if it is undefined', function ()
+    {
+        var data = { foo: undefined }
+        var errors = validate({ foo: { required: true } }, data)
+        expect(errors.foo).to.equal('This field is required')
+    })
+    
     it('fails if a field does not have the right type', function ()
     {
         var errors = validate({ foo: { type: Number } }, { foo: '123' })
